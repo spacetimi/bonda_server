@@ -3,8 +3,8 @@ package testing
 import (
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/spacetimi/server/timi_shared/code/config"
-	"github.com/spacetimi/server/timi_shared/code/core/adaptors/mongo_wrapper"
+	"github.com/spacetimi/timi_shared_server/code/config"
+	"github.com/spacetimi/timi_shared_server/code/core/adaptors/mongo_wrapper"
 	"log"
 	"net/http"
 	"strconv"

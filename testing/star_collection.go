@@ -1,8 +1,8 @@
 package testing
 
 import (
-	"github.com/spacetimi/server/timi_shared/code/core/adaptors/mongo_wrapper"
-	"github.com/spacetimi/server/timi_shared/utils/logger"
+	"github.com/spacetimi/timi_shared_server/code/core/adaptors/mongo_wrapper"
+	"github.com/spacetimi/timi_shared_server/utils/logger"
 	"reflect"
 )
 

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/spacetimi/server/bonda/app_src/app_init"
-	"github.com/spacetimi/server/bonda/dummy_controller"
-	"github.com/spacetimi/server/bonda/testing"
-	"github.com/spacetimi/server/timi_shared/code/core/shared_init"
-	"github.com/spacetimi/server/timi_shared/code/api_server"
+	"github.com/spacetimi/bonda_server/app_src/app_init"
+	"github.com/spacetimi/bonda_server/dummy_controller"
+	"github.com/spacetimi/bonda_server/testing"
+	"github.com/spacetimi/timi_shared_server/code/core/shared_init"
+	"github.com/spacetimi/timi_shared_server/code/api_server"
 )
 
 func main() {

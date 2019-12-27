@@ -2,7 +2,7 @@ package testing
 
 import (
 	"encoding/json"
-	"github.com/spacetimi/server/timi_shared/code/core/adaptors/mongo_wrapper"
+	"github.com/spacetimi/timi_shared_server/code/core/adaptors/mongo_wrapper"
 )
 
 /**

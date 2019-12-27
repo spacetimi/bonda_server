@@ -1,6 +1,6 @@
 package app_init
 
-import "github.com/spacetimi/server/timi_shared/code/core/shared_init"
+import "github.com/spacetimi/timi_shared_server/code/core/shared_init"
 
 func GetAppInitializer() shared_init.IAppInitializer {
 	return &appInitializer
