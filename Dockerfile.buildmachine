@@ -7,7 +7,7 @@ ADD . /go/src/github.com/spacetimi/bonda_server
 RUN sed -i -e 's/localhost/host.docker.internal/g' /go/src/github.com/spacetimi/bonda_server/config/environment_config.local.json
 
 # Fetch shared source
-git clone https://github.com/spacetimi/timi_shared_server /go/src/github.com/spacetimi/timi_shared_server
+RUN git clone https://github.com/spacetimi/timi_shared_server /go/src/github.com/spacetimi/timi_shared_server
 
 # Fetch required dependencies
 RUN go get github.com/gorilla/mux
