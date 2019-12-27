@@ -1,0 +1,17 @@
+{
+    "AppEnvironment": 2,
+    "Port": 8000,
+
+    "SharedMongoURL": "mongodb://root:netapp1!@bonda-test-shard-00-00-vk722.mongodb.net:27017,bonda-test-shard-00-01-vk722.mongodb.net:27017,bonda-test-shard-00-02-vk722.mongodb.net:27017/test?ssl=true&replicaSet=bonda-test-shard-0&authSource=admin&retryWrites=true",
+    "AppMongoURL": "mongodb://root:netapp1!@bonda-test-shard-00-00-vk722.mongodb.net:27017,bonda-test-shard-00-01-vk722.mongodb.net:27017,bonda-test-shard-00-02-vk722.mongodb.net:27017/test?ssl=true&replicaSet=bonda-test-shard-0&authSource=admin&retryWrites=true",
+    "SharedDatabaseName": "shared",
+    "AppDatabaseName": "bonda",
+
+    "SharedRedisURL": "TBD",
+    "SharedRedisPasswd": "",
+    "AppRedisURL": "TBD",
+    "AppRedisPasswd": "",
+
+    "SharedMetadataSourceURL": "",
+    "AppMetadataSourceURL": ""
+}

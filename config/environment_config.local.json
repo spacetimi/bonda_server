@@ -1,0 +1,17 @@
+{
+    "AppEnvironment": 0,
+    "Port": 8000,
+
+    "SharedMongoURL": "mongodb://localhost:27017",
+    "AppMongoURL": "mongodb://localhost:27017",
+    "SharedDatabaseName": "shared",
+    "AppDatabaseName": "bonda",
+
+    "SharedRedisURL": "localhost:6379",
+    "SharedRedisPasswd": "",
+    "AppRedisURL": "localhost:6379",
+    "AppRedisPasswd": "",
+
+    "SharedMetadataSourceURL": "local",
+    "AppMetadataSourceURL": "local"
+}

@@ -1,0 +1,17 @@
+{
+    "AppEnvironment": 1,
+    "Port": 8000,
+
+    "SharedMongoURL": "mongodb://root:netapp1!@bonda-test-shard-00-00-vk722.mongodb.net:27017,bonda-test-shard-00-01-vk722.mongodb.net:27017,bonda-test-shard-00-02-vk722.mongodb.net:27017/test?ssl=true&replicaSet=bonda-test-shard-0&authSource=admin&retryWrites=true",
+    "AppMongoURL": "mongodb://root:netapp1!@bonda-test-shard-00-00-vk722.mongodb.net:27017,bonda-test-shard-00-01-vk722.mongodb.net:27017,bonda-test-shard-00-02-vk722.mongodb.net:27017/test?ssl=true&replicaSet=bonda-test-shard-0&authSource=admin&retryWrites=true",
+    "SharedDatabaseName": "shared",
+    "AppDatabaseName": "bonda",
+
+    "SharedRedisURL": "redis-16173.c91.us-east-1-3.ec2.cloud.redislabs.com:16173",
+    "SharedRedisPasswd": "netapp1!",
+    "AppRedisURL": "redis-16173.c91.us-east-1-3.ec2.cloud.redislabs.com:16173",
+    "AppRedisPasswd": "netapp1!",
+
+    "SharedMetadataSourceURL": "https://spacetimi-shared-test.s3.amazonaws.com/metadata",
+    "AppMetadataSourceURL": "https://spacetimi-bonda-test.s3.amazonaws.com/metadata"
+}
