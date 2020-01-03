@@ -22,4 +22,3 @@ RUN go install github.com/spacetimi/bonda_server/main
 
 ENTRYPOINT /go/bin/main
 EXPOSE 8000
-EXPOSE 8001
