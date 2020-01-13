@@ -13,5 +13,10 @@
     "AppRedisPasswd": "netapp1!",
 
     "SharedMetadataSourceURL": "https://spacetimi-shared-test.s3.amazonaws.com/metadata",
-    "AppMetadataSourceURL": "https://spacetimi-bonda-test.s3.amazonaws.com/metadata"
+    "AppMetadataSourceURL": "https://spacetimi-bonda-test.s3.amazonaws.com/metadata",
+
+    "AdminToolConfig": {
+        "SharedMetadataS3BucketName": "spacetimi-shared-test",
+        "AppMetadataS3BucketName": "spacetimi-bonda-test"
+    }
 }

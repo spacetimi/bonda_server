@@ -13,5 +13,10 @@
     "AppRedisPasswd": "",
 
     "SharedMetadataSourceURL": "",
-    "AppMetadataSourceURL": ""
+    "AppMetadataSourceURL": "",
+
+    "AdminToolConfig": {
+        "SharedMetadataS3BucketName": "spacetimi-shared-production",
+        "AppMetadataS3BucketName": "spacetimi-bonda-production"
+    }
 }
