@@ -1,5 +1,8 @@
 FROM golang
 
+# TODO: Avi: Do not store aws credentials here
+ADD ./aws.credentials /root/.aws/credentials
+
 # Copy app source
 ADD . /go/src/github.com/spacetimi/bonda_server
 
@@ -14,6 +17,7 @@ RUN go get github.com/gorilla/mux
 RUN go get go.mongodb.org/mongo-driver/mongo
 RUN go get github.com/go-redis/redis
 RUN go get github.com/dgrijalva/jwt-go
+RUN go get github.com/aws/aws-sdk-go/...
 
 # Build and install the server binary
 RUN go install github.com/spacetimi/bonda_server/main
