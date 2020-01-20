@@ -1,8 +1,5 @@
 FROM golang
 
-# TODO: Avi: Do not store aws credentials here
-ADD ./aws.credentials /root/.aws/credentials
-
 # Copy app source
 ADD . /go/src/github.com/spacetimi/bonda_server
 

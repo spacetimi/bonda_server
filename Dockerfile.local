@@ -2,9 +2,6 @@ FROM golang
 
 # NOTE: Build context is expected to be one level higher than your app's code folder. Please call docker build from there
 
-# TODO: Avi: Do not store aws credentials here
-ADD ./bonda_server/aws.credentials /root/.aws/credentials
-
 # Copy app source
 ADD ./bonda_server /go/src/github.com/spacetimi/bonda_server
 
