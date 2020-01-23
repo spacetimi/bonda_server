@@ -1,4 +1,4 @@
-FROM golang
+FROM spacetimi/spacetimi-docker-parent
 
 # Copy app source
 ADD . /go/src/github.com/spacetimi/bonda_server
@@ -8,13 +8,6 @@ RUN sed -i -e 's/localhost/host.docker.internal/g' /go/src/github.com/spacetimi/
 
 # Fetch shared source
 RUN git clone https://github.com/spacetimi/timi_shared_server /go/src/github.com/spacetimi/timi_shared_server
-
-# Fetch required dependencies
-RUN go get github.com/gorilla/mux
-RUN go get go.mongodb.org/mongo-driver/mongo
-RUN go get github.com/go-redis/redis
-RUN go get github.com/dgrijalva/jwt-go
-RUN go get github.com/aws/aws-sdk-go/...
 
 # Build and install the server binary
 RUN go install github.com/spacetimi/bonda_server/main
