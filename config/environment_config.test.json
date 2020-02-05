@@ -7,9 +7,9 @@
     "SharedDatabaseName": "shared",
     "AppDatabaseName": "bonda",
 
-    "SharedRedisURL": "redis-16173.c91.us-east-1-3.ec2.cloud.redislabs.com:16173",
+    "SharedRedisURL": "redis-10300.c93.us-east-1-3.ec2.cloud.redislabs.com:10300",
     "SharedRedisPasswd": "netapp1!",
-    "AppRedisURL": "redis-16173.c91.us-east-1-3.ec2.cloud.redislabs.com:16173",
+    "AppRedisURL": "redis-10300.c93.us-east-1-3.ec2.cloud.redislabs.com:10300",
     "AppRedisPasswd": "netapp1!",
 
     "SharedMetadataSourceURL": "https://spacetimi-shared-test.s3.amazonaws.com/metadata",
