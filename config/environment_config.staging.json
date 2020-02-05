@@ -14,6 +14,7 @@
 
     "SharedMetadataSourceURL": "",
     "AppMetadataSourceURL": "",
+    "MetadataAutoUpdaterPollSeconds": 300,
 
     "AdminToolConfig": {
         "SharedMetadataS3BucketName": "spacetimi-shared-staging",
