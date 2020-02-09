@@ -23,7 +23,9 @@ func (appInitializer *AppInitializer) AppInit() {
 // TODO: Avi: Move this somewhere else?
 func registerMetadataFactories() {
 	metadata_factory.RegisterFactory("MetadataTest", MetadataTestFactory{})
+	metadata_factory.RegisterFactory("Planets", PlanetsFactory{})
 }
+
 
 type MetadataTestFactory struct {	// Implements IMetadataFactory
 }
@@ -40,6 +42,28 @@ func (m MetadataTest) GetKey() string {
 	return "MetadataTest"
 }
 func (m MetadataTest) GetMetadataSpace() metadata_typedefs.MetadataSpace {
+	return metadata_typedefs.METADATA_SPACE_APP
+}
+
+
+
+
+
+type PlanetsFactory struct {	// Implements IMetadataFactory
+}
+
+func (f PlanetsFactory) Instantiate() metadata_typedefs.IMetadataItem {
+	return &Planets{}
+}
+
+// TODO: Avi: Move this somewhere else
+type Planets struct {
+	Planets []string
+}
+func (m Planets) GetKey() string {
+	return "Planets"
+}
+func (m Planets) GetMetadataSpace() metadata_typedefs.MetadataSpace {
 	return metadata_typedefs.METADATA_SPACE_APP
 }
 
