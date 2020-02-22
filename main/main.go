@@ -12,5 +12,5 @@ func main() {
 
 	shared_init.SharedInit(app_init.GetAppInitializer())
 
-    server.StartServer(testing.TestingController, dummy_controller.DummyController)
+    server.StartServer(testing.TestingController, dummy_controller.DummyController, testing.StorageTestingController)
 }
