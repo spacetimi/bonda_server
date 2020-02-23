@@ -164,13 +164,16 @@ func NewFeaturedBooksBlob() *FeaturedBooksBlob {
     fbb := &FeaturedBooksBlob{}
     fbb.BlobDescriptor = storage_typedefs.NewBlobDescriptor(storage_typedefs.STORAGE_SPACE_APP,
                                                   "featuredbooks",
-                                                            []string{"platformid"})
+                                                            []string{"PlatformId"},
+                                                            false)
     return fbb
 }
 
 func LoadByPlatformId(platformId string) (*FeaturedBooksBlob, error) {
     fbb := NewFeaturedBooksBlob()
-    err := storage_service.GetBlobByPrimaryKeys([]interface{}{platformId}, fbb, context.Background())
+    fbb.PlatformId = platformId
+
+    err := storage_service.GetBlobByPrimaryKeys(fbb, context.Background())
     if err != nil {
         return nil, errors.New("error getting blob: " + err.Error())
     }
@@ -186,9 +189,9 @@ type UserIdentifiable struct {
     storage_typedefs.BlobDescriptor
 }
 
-func NewUserIdentifiable(space storage_typedefs.StorageSpace, blobName string) UserIdentifiable {
+func NewUserIdentifiable(space storage_typedefs.StorageSpace, blobName string, isRedisAllowed bool) UserIdentifiable {
     uib := UserIdentifiable{}
-    uib.BlobDescriptor = storage_typedefs.NewBlobDescriptor(space, blobName, []string{"userid"})
+    uib.BlobDescriptor = storage_typedefs.NewBlobDescriptor(space, blobName, []string{"UserId"}, isRedisAllowed)
     return uib
 }
 
@@ -207,13 +210,15 @@ type UserBooksBlob struct {
 
 func NewUserBooksBlob() *UserBooksBlob {
     ubb := &UserBooksBlob{}
-    ubb.UserIdentifiable = NewUserIdentifiable(storage_typedefs.STORAGE_SPACE_APP, "userbooks")
+    ubb.UserIdentifiable = NewUserIdentifiable(storage_typedefs.STORAGE_SPACE_APP, "userbooks", true)
     return ubb
 }
 
 func LoadByUserId(userId int64) (*UserBooksBlob, error) {
     ubb := NewUserBooksBlob()
-    err := storage_service.GetBlobByPrimaryKeys([]interface{}{userId}, ubb, context.Background())
+    ubb.UserId = userId
+
+    err := storage_service.GetBlobByPrimaryKeys(ubb, context.Background())
     if err != nil {
         return nil, errors.New("error getting blob: " + err.Error())
     }
