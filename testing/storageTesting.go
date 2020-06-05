@@ -157,7 +157,7 @@ type FeaturedBooksBlob struct {     // Implements IBlob
     PlatformId string
     FeaturedBooks []FeaturedBook
 
-    storage_typedefs.BlobDescriptor
+    storage_typedefs.BlobDescriptor `bson:"ignore"`
 }
 
 func NewFeaturedBooksBlob() *FeaturedBooksBlob {
@@ -186,7 +186,7 @@ func LoadByPlatformId(platformId string) (*FeaturedBooksBlob, error) {
 
 type UserIdentifiable struct {
     UserId int64
-    storage_typedefs.BlobDescriptor
+    storage_typedefs.BlobDescriptor `bson:"ignore"`
 }
 
 func NewUserIdentifiable(space storage_typedefs.StorageSpace, blobName string, isRedisAllowed bool) UserIdentifiable {
